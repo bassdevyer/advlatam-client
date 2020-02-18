@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "advlatam-client": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "advlatam-client"
+    }
+  },
+  "defaultProject": "advlatam-client",
+  "cli": {
+    "analytics": "a2bcbcc9-15f0-465f-bbce-80ac24b5cd05"
+  }
 }
