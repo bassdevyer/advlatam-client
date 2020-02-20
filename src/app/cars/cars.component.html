@@ -1,7 +1,6 @@
 <h2>Autos Registrados</h2>
 <ul class="cars">
-  <li *ngFor="let car of cars" (click)="onSelect(car)"
-  [class.selected]="car === selectedCar">
+  <li *ngFor="let car of cars">
     <a routerLink="/detail/{{car.id}}">
         <span class="badge">{{car.plate}}</span> {{car.model}}
     </a>

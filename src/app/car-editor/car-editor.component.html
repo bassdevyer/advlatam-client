@@ -1,0 +1,24 @@
+<h1>Ingreso de información de Auto</h1>
+<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+    <label>
+    Placa:
+        <input type="text" formControlName="plate">
+    </label>
+    <label>
+        Color:
+        <input type="text" formControlName="color">
+    </label>
+    <label>
+        Modelo:
+            <input type="text" formControlName="model">
+        </label>
+        <label>
+            Chasis:
+                <input type="text" formControlName="vin">
+            </label>
+            <label>
+                Información adicional:
+                    <input type="text" formControlName="additionalInfo">
+                </label>
+                <button type="submit" [disabled]="!carForm.valid">Guardar</button>
+</form>
