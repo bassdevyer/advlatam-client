@@ -5,6 +5,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import {TabMenuModule} from 'primeng/tabmenu';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import {InputTextModule} from 'primeng/inputtext';
+import {ButtonModule} from 'primeng/button';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,8 +35,9 @@ import { CarEditorComponent } from './car-editor/car-editor.component';
    HttpClientModule,
    TabMenuModule,
    ScrollPanelModule,
-   ReactiveFormsModule
-
+   ReactiveFormsModule,
+   InputTextModule,
+   ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

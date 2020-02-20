@@ -1,24 +1,30 @@
-<h1>Ingreso de información de Auto</h1>
-<form [formGroup]="carForm" (ngSubmit)="onSubmit()">
-    <label>
-    Placa:
-        <input type="text" formControlName="plate">
-    </label>
-    <label>
-        Color:
-        <input type="text" formControlName="color">
-    </label>
-    <label>
-        Modelo:
-            <input type="text" formControlName="model">
-        </label>
-        <label>
-            Chasis:
-                <input type="text" formControlName="vin">
-            </label>
-            <label>
-                Información adicional:
-                    <input type="text" formControlName="additionalInfo">
+<h3>Ingreso de información de Auto</h3>
+<div class="ui-g ui-fluid">
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+                <label>
+                Placa:
+                    <input type="text" pInputText formControlName="plate">
                 </label>
-                <button type="submit" [disabled]="!carForm.valid">Guardar</button>
-</form>
+                <label>
+                    Color:
+                    <input type="text" pInputText formControlName="color">
+                </label>
+                <label>
+                    Modelo:
+                        <input type="text" pInputText formControlName="model">
+                    </label>
+                    <label>
+                        Chasis:
+                            <input type="text" pInputText formControlName="vin">
+                        </label>
+                        <label>
+                            Información adicional:
+                                <input type="text" pInputText formControlName="additionalInfo">
+                            </label>
+                            <button pButton type="submit" [disabled]="!carForm.valid">Guardar</button>
+            </form>
+</div>
+</div>
+</div>
