@@ -1,8 +1,21 @@
-<h2>Autos Registrados</h2>
-<ul class="cars">
-  <li *ngFor="let car of cars">
-    <a routerLink="/detail/{{car.id}}">
-        <span class="badge">{{car.plate}}</span> {{car.model}}
-    </a>
-  </li>
-</ul>
+<h3>Autos Registrados</h3>
+<p-table [value]="cars">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Color</th>
+          <th>Chasis</th>
+          <th>Información adicional</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+      <tr>
+          <td>{{car.plate}}</td>
+          <td>{{car.model}}</td>
+          <td>{{car.color}}</td>
+          <td>{{car.vin}}</td>
+          <td>{{car.additionalInfo}}</td>
+      </tr>
+  </ng-template>
+</p-table>

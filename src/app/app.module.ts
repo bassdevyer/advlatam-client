@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,7 +38,8 @@ import { CarEditorComponent } from './car-editor/car-editor.component';
    ScrollPanelModule,
    ReactiveFormsModule,
    InputTextModule,
-   ButtonModule
+   ButtonModule,
+   TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
