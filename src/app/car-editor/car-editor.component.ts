@@ -22,7 +22,10 @@ export class CarEditorComponent implements OnInit {
     // TODO: Use EventEmitter with form value
     console.warn(this.carForm.value);
       this.carService
-    .addCar(this.carForm.value)
+    .addCar(this.carForm.value).subscribe(car => {
+      console.log('Car added!')
+      window.location.reload()
+    });
   }
 
   constructor(private carService: CarService) { }
