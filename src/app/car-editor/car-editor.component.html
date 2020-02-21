@@ -1,16 +1,36 @@
-<app-cars></app-cars>
+<h3>Autos Registrados</h3>
+<p-table [value]="cars">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Placa</th>
+          <th>Modelo</th>
+          <th>Color</th>
+          <th>Chasis</th>
+          <th>Información adicional</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-car>
+      <tr>
+          <td>{{car.plate}}</td>
+          <td>{{car.model}}</td>
+          <td>{{car.color}}</td>
+          <td>{{car.vin}}</td>
+          <td>{{car.additionalInfo}}</td>
+      </tr>
+  </ng-template>
+</p-table>
 <h3>Ingreso de información de Auto</h3>
 <div class="ui-g ui-fluid">
-    <div class="ui-g-12 ui-md-4">
+    <div class="ui-g-3 ui-md-3">
         <div class="ui-inputgroup">
             <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
                 <label>
                 Placa:
-                    <input type="text" pInputText formControlName="plate">
+                    <input (keyup)="onKey($event)" type="text" pInputText formControlName="plate" maxlength="7">
                 </label>
                 <label>
                     Color:
-                    <input type="text" pInputText formControlName="color">
+                    <p-colorPicker formControlName="color"></p-colorPicker>
                 </label>
                 <label>
                     Modelo:

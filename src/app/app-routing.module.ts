@@ -6,7 +6,6 @@ import { CarEditorComponent } from './car-editor/car-editor.component';
 
 
 const routes: Routes = [
-    { path: 'cars', component: CarsComponent },
     { path: '',
       redirectTo: '/car-editor',
       pathMatch: 'full'

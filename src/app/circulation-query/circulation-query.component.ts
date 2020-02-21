@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CirculationQueryComponent implements OnInit {
 
+  plate: string = '';
+  dateTime: Date = new Date();
+  minDate: Date = new Date();
+  displayResult: boolean = false;
+
+  validateCirculationStatus() {
+      this.displayResult = true;
+  }
+
+
   constructor() { }
 
   ngOnInit(): void {

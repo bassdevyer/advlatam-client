@@ -6,7 +6,7 @@ import {MenuItem} from 'primeng/api';
     templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title: string = 'App Managers'
+  title: string = 'AdvLatam Client'
   items: MenuItem[];
 
   ngOnInit() {

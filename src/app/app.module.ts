@@ -8,6 +8,8 @@ import { ScrollPanelModule } from 'primeng/scrollpanel';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+import {CalendarModule} from 'primeng/calendar';
+import {DialogModule} from 'primeng/dialog';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +19,7 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CirculationQueryComponent } from './circulation-query/circulation-query.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CarEditorComponent } from './car-editor/car-editor.component';
+import {ColorPickerModule} from 'primeng/colorpicker';
 
 
 @NgModule({
@@ -39,7 +42,10 @@ import { CarEditorComponent } from './car-editor/car-editor.component';
    ReactiveFormsModule,
    InputTextModule,
    ButtonModule,
-   TableModule
+   TableModule,
+   CalendarModule,
+   DialogModule,
+   ColorPickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

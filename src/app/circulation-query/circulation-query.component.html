@@ -1,1 +1,16 @@
-<p>circulation-query works!</p>
+<div class="ui-g ui-fluid">
+   <div class="ui-g-12 ui-md-12">
+        <label>Placa</label>
+        <input type="text" pInputText [(ngModel)]="plate"/>
+    </div>
+    <div class="ui-g-12 ui-md-12">
+        <h3>Fecha y hora</h3>
+        <p-calendar [minDate]="minDate" [(ngModel)]="dateTime" [showTime]="true"></p-calendar>
+    </div>
+    <div class="ui-g-12 ui-md-12">
+    <button pButton [disabled]="!plate && !dateTime" (click)="validateCirculationStatus($event)">Buscar</button>
+    </div>
+</div>
+<p-dialog header="Title" [(visible)]="displayResult">
+    Content
+</p-dialog>
