@@ -16,7 +16,7 @@ export class CarEditorComponent implements OnInit {
     plate: new FormControl('', [Validators.required, Validators.minLength(6), Validators.pattern('[A-Z]{3}[0-9]{3,4}')]),
     color: new FormControl('#000000', Validators.required),
     model: new FormControl('', Validators.required),
-    vin: new FormControl('', Validators.required),
+    vin: new FormControl('', [Validators.required, Validators.minLength(17),  Validators.pattern('[a-zA-Z0-9]')]),
     additionalInfo: new FormControl('')
   });
 
